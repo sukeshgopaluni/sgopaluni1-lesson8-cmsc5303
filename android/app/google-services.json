@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "426177739881",
+    "project_id": "sgopaluni1-cmsc5303-flutter",
+    "storage_bucket": "sgopaluni1-cmsc5303-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:426177739881:android:dcbfb6bfdf6ef68d7236f8",
+        "android_client_info": {
+          "package_name": "edu.uco.sgopaluni1.cmsc5303.lesson"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3a9k7VEBIZ5oXHXEHT8N0vxCo40O3edI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

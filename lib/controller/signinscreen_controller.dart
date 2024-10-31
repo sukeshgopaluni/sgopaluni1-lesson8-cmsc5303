@@ -27,7 +27,7 @@ class SignInScreenController {
     } on FirebaseAuthException catch (e) {
       state.callSetState(() => state.model.inProgress = false);
       var error = 'Sign in error! Reason ${e.code} ${e.message}';
-      print("=========== $error");
+      print("============= $error");
       if(state.mounted){
         showSnackbar(
         context: state.context, 
@@ -37,7 +37,7 @@ class SignInScreenController {
       }
     } catch (e) {
       state.callSetState(() => state.model.inProgress = false);
-      print("=========== sign in error: $e");
+      print("============ sign in error: $e");
       if(state.mounted){
         showSnackbar(
         context: state.context, 

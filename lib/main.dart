@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:lesson6/view/createaccount_screen.dart';
+import 'package:lesson6/view/creatememo_screen.dart';
 import 'package:lesson6/view/startdispatcher.dart';
 import 'firebase_options.dart';
 
@@ -26,7 +27,9 @@ class FirebaseTemplateApp extends StatelessWidget {
       routes: {
          StartDispatcher.routeName:(context) => const StartDispatcher(),
          CreateAccountScreen.routeName:(context) => const CreateAccountScreen(),
+         CreateMemoScreen.routeName:(context) => const CreateMemoScreen(),
       },
-    ); 
+    );
+    
   }
 }

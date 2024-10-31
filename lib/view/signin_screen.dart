@@ -45,6 +45,7 @@ class SignInState extends State<SignInScreen> {
           key: formKey,
           child: Column(
             children: [
+              Text('PhotoMemo', style: Theme.of(context).textTheme.headlineLarge),
               TextFormField(
                 decoration: const InputDecoration(
                   hintText: 'Email address',

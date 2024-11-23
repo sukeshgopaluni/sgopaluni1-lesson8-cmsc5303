@@ -29,3 +29,7 @@ Future<(String, String)> uploadPhotoFile({
   String downloadURL = await snapshot.ref.getDownloadURL();
   return (filename, downloadURL);
 }
+
+Future<void> deleteFile({required String filename}) async {
+  await FirebaseStorage.instance.ref().child(filename).delete();
+}

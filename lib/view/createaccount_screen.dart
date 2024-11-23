@@ -41,56 +41,59 @@ class CreateAccountState extends State<CreateAccountScreen> {
 
   Widget formView(BuildContext context) {
     return SingleChildScrollView(
-        child: Padding(
-      padding: const EdgeInsets.all(12.0),
-      child: Form(
-        key: formKey,
-        child: Column(
-          children: [
-            TextFormField(
-              decoration: const InputDecoration(hintText: 'Email address'),
-              initialValue: model.email,
-              keyboardType: TextInputType.emailAddress,
-              autocorrect: false,
-              validator: model.validateEmail,
-              onSaved: model.saveEmail,
-            ),
-            TextFormField(
-              decoration: const InputDecoration(
-                hintText: 'Enter password',
-              ),
-              initialValue: model.password,
-              autocorrect: false,
-              validator: model.validatePassword,
-              onSaved: model.savePassword,
-              obscureText: !model.showPasswords,
-            ),
-            TextFormField(
-              decoration: const InputDecoration(
-                hintText: 'Enter password to confirm',
-              ),
-              initialValue: model.password,
-              autocorrect: false,
-              validator: model.validatePassword,
-              onSaved: model.savePasswordConfirm,
-              obscureText: !model.showPasswords,
-            ),
-            Row(
-              children: [
-                Checkbox(
-                  value: model.showPasswords,
-                  onChanged: con.showHidePasswords,
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Form(
+          key: formKey,
+          child: Column(
+            children: [
+              TextFormField(
+                decoration: const InputDecoration(
+                  hintText: 'Email address',
                 ),
-                const Text('Show passwords'),
-              ],
-            ),
-            FilledButton.tonal(
-              onPressed: con.createAccount,
-              child: const Text('Create'),
-            ),
-          ],
+                initialValue: model.email,
+                keyboardType: TextInputType.emailAddress,
+                autocorrect: false,
+                validator: model.validateEmail,
+                onSaved: model.saveEmail,
+              ),
+              TextFormField(
+                decoration: const InputDecoration(
+                  hintText: 'Enter password',
+                ),
+                initialValue: model.password,
+                autocorrect: false,
+                validator: model.validatePassword,
+                onSaved: model.savePassword,
+                obscureText: !model.showPasswords,
+              ),
+              TextFormField(
+                decoration: const InputDecoration(
+                  hintText: 'Enter password to confirm',
+                ),
+                initialValue: model.password,
+                autocorrect: false,
+                validator: model.validatePassword,
+                onSaved: model.savePasswordConfirm,
+                obscureText: !model.showPasswords,
+              ),
+              Row(
+                children: [
+                  Checkbox(
+                    value: model.showPasswords,
+                    onChanged: con.showHidePasswords,
+                  ),
+                  const Text('show passwords'),
+                ],
+              ),
+              FilledButton.tonal(
+                onPressed: con.createAccount,
+                child: const Text('Create'),
+              ),
+            ],
+          ),
         ),
       ),
-    ));
+    );
   }
 }
